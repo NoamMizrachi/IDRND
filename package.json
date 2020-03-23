@@ -1,0 +1,19 @@
+{
+  "name": "idrnd",
+  "version": "1.0.0",
+  "description": "Idrnd tool for liveness poc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoamMizrachi/IDRND.git"
+  },
+  "author": "Noam Mizrachi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoamMizrachi/IDRND/issues"
+  },
+  "homepage": "https://github.com/NoamMizrachi/IDRND#readme"
+}
