@@ -10,7 +10,7 @@ function sdk() {
 
   const getFirstCell = xlsxSheet => {
     // var workbook = XLSX.readFile(xlsxSheet);
-    console.log("hello");
+    return "hellllo";
   };
 
   return {

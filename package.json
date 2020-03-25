@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx babel src/sdk.js --out-dir temp && webpack --display-error-details"
+    "build": "npx babel src --out-dir temp && webpack --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -17,24 +17,11 @@
     "url": "https://github.com/NoamMizrachi/IDRND/issues"
   },
   "homepage": "https://github.com/NoamMizrachi/IDRND#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/register": "^7.9.0",
     "babel-cli": "^6.26.0",
-    "babel-jest": "^25.1.0",
-    "babel-loader": "^8.1.0",
-    "exif-js": "^2.3.0",
-    "node-xlsx": "^0.15.0",
-    "request": "^2.88.2",
-    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
-    "whatwg-fetch": "^3.0.0",
-    "winston": "^3.2.1",
-    "winston-logzio": "^5.0.3",
-    "xlsx": "^0.15.6"
+    "webpack-cli": "^3.3.11"
   }
 }

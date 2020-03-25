@@ -4,6 +4,7 @@
     <script src="../dist/idrndSdk.js"></script>
     <style>
       .main-container {
+          display: flex;
         margin-bottom: 15px;
       }
       .container {
@@ -15,17 +16,25 @@
   <body>
     <div class="main-container">
       <div class="container">
-        <label for="myfile">Select a file:</label>
-      </div>
-      <div class="container">
-        <input type="file" id="xlsxInput" name="xlsxInput" />
-      </div>
-      <div class="container">
+        <label for="xlsxInput">Upload xlsx file:</label><br><br>
+        <input type="file" id="xlsxInput" name="xlsxInput"><br><br>
         <input
           type="submit"
           value="Submit xlsx"
           onclick="return onSubmitXlsx();"
-        />
+        /><br><br>
+      </div>
+      <div class="container">
+        <label for="imagesInput">Upload multiple images</label><br><br>
+        <input type="file" id="imagesInput" name="imagesInput" multiple><br><br>
+        <input
+          type="submit"
+          value="Submit images"
+          onclick="return onSubmitImages();"
+        /><br><br>
+        
+      </div>
+        
       </div>
     </div>
 
@@ -35,8 +44,14 @@
       const xlsxFileFromUpload = document.querySelector("#xlsxInput");
 
       function onSubmitXlsx() {
-        alert("Submit button clicked!");
-        toAlert = sdk.getFirstCell(xlsxFileFromUpload);
+        // alert("Submit button clicked!");
+        toAlert = sdkRef.getFirstCell(xlsxFileFromUpload);
+        alert(toAlert);
+        return true;
+      }
+      function onSubmitImages() {
+        // alert("Submit button clicked!");
+        toAlert = sdkRef.getFirstCell(xlsxFileFromUpload);
         alert(toAlert);
         return true;
       }
