@@ -54,31 +54,39 @@
         let interval = setInterval(function() {
           if (counter < files.length) {
             counter++;
-            console.log(files[counter]);
-            console.log(files[counter].name);
-            //////////////////////////////do something
-            var data = new FormData();
-            data.append("file", files[counter]);
+            ///////////////
+            const reader = new FileReader();
+            reader.addEventListener("load", function() {
+              console.log(files[counter]);
 
-            var xhr = new XMLHttpRequest();
-            xhr.withCredentials = true;
+              //////////////////////////////do something
+              var myHeaders = new Headers();
+              myHeaders.append("Access-Control-Allow-Origin", "*");
+              myHeaders.append("TOKEN", "AU10TIX");
+              myHeaders.append(
+                "Cookie",
+                "JSESSIONID=BB19D77F465198B6A15733D29165CB7A"
+              );
 
-            xhr.addEventListener("readystatechange", function() {
-              if (this.readyState === 4) {
-                console.log(this.responseText);
-              }
+              var formdata = new FormData();
+              formdata.append("file", this.result);
+
+              var requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: formdata,
+                redirect: "follow"
+              };
+
+              fetch("http://18.144.71.78:8080/check_liveness", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log("error", error));
+
+              ////////////////////////////end
             });
-
-            xhr.open("POST", "http://18.144.71.78:8080/check_liveness");
-            xhr.setRequestHeader("TOKEN", "AU10TIX");
-            xhr.setRequestHeader(
-              "Cookie",
-              "JSESSIONID=BB19D77F465198B6A15733D29165CB7A"
-            );
-
-            xhr.send(data);
-
-            ////////////////////////////end
+            reader.readAsDataURL(files[counter]);
+            ///////////////////
           } else {
             clearInterval(interval);
           }
