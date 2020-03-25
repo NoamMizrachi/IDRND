@@ -2,7 +2,7 @@
 
 const path = require("path");
 // This is main configuration object that tells Webpackw what to do.
-var config = {
+const config = {
   //path to entry paint
   entry: path.join(__dirname, "temp/sdk.js"),
   //path and filename of the final output
