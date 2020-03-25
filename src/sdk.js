@@ -19,4 +19,4 @@ function sdk() {
   };
 }
 
-module.exports = { sdk };
+window.sdk = sdk;
