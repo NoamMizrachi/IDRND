@@ -1,7 +1,7 @@
-const xlsx = require('node-xlsx');
-// import xlsx from 'node-xlsx';
-const fs = require('fs');
-const logger = require('./Logger')
+// const xlsx = require('node-xlsx');
+// // import xlsx from 'node-xlsx';
+// const fs = require('fs');
+// const logger = require('./Logger')
 
 
 
@@ -15,11 +15,11 @@ const logger = require('./Logger')
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
-const dataForXlsx = [[1, 2, 3], [true, false, null, 'sheetjs'], ['foo', 'bar', new Date('2014-02-19T14:30Z'), '0.3'], ['baz', null, 'qux']];
-var buffer = xlsx.build([{ name: "outPutXlsx", data: dataForXlsx }]); // Returns a buffer
-const workSheetsFromBuffer = xlsx.parse(buffer);
+// const dataForXlsx = [[1, 2, 3], [true, false, null, 'sheetjs'], ['foo', 'bar', new Date('2014-02-19T14:30Z'), '0.3'], ['baz', null, 'qux']];
+// var buffer = xlsx.build([{ name: "outPutXlsx", data: dataForXlsx }]); // Returns a buffer
+// const workSheetsFromBuffer = xlsx.parse(buffer);
 
-console.log(workSheetsFromBuffer[0].data[2]);
+// console.log(workSheetsFromBuffer[0].data[2]);
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -35,3 +35,7 @@ console.log(workSheetsFromBuffer[0].data[2]);
 //       clearInterval(interval);
 //    }
 // }, 5000);
+
+
+let a = [4,3,4];
+console.log(a.length);
