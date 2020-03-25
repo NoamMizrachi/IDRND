@@ -25,4 +25,26 @@ request(options, function (error, response) {
     if (error) throw new Error(error);
     console.log(response.body);
 });
-//https://app.logz.io/#/dashboard/data-sources/nodejs-winston
+
+/** Fetch
+ * 
+ */
+
+// var myHeaders = new Headers();
+// myHeaders.append("TOKEN", "AU10TIX");
+// myHeaders.append("Cookie", "JSESSIONID=0A10DB69C11B440190A12F0BFE173F8A");
+
+// var formdata = new FormData();
+// formdata.append("file", fileInput.files[0], "/C:/Users/noam.mizrachi/Desktop/backgrounds/0D0EED21FC66440B8801C60A33E36028_photo.jpg");
+
+// var requestOptions = {
+//   method: 'POST',
+//   headers: myHeaders,
+//   body: formdata,
+//   redirect: 'follow'
+// };
+
+// fetch("http://18.144.71.78:8080/check_liveness", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
